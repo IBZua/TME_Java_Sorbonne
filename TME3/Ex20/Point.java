@@ -2,9 +2,9 @@ public class Point {
     private int posx;
     private int posy;
 
-    public Point(int abscisse, int ordonnee) {
-        posx = abscisse;
-        posy = ordonnee;
+    public Point(int posx, int posy) {
+        this.posx = posx;
+        this.posy = posy;
     }
 
     public Point() {
@@ -22,7 +22,7 @@ public class Point {
     }
 
     public double distance(Point p) {
-        return Math.sqrt(Math.pow((this.posx - p.posx), 2) + Math.pow(this.posy - p.posy, 2));
+        return Math.sqrt(Math.pow(p.posx - this.posx,2) + Math.pow(p.posy - this.posy,2));
     }
 
     public void deplaceToi(int newx, int newy) {
